@@ -1,0 +1,53 @@
+@model FisFaturaUI.Models.UserRegisterViewModel
+<form asp-action="AddUser" method="post">
+    <div class="form-row">
+        <div class="form-group">
+            <label class="form-label">TC Kimlik No</label>
+            <input asp-for="TcKimlikNo" placeholder="TC Kimlik No" class="form-control" />
+            <span asp-validation-for="TcKimlikNo" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label class="form-label">İsim</label>
+            <input asp-for="Isim" placeholder="İsim" class="form-control" />
+            <span asp-validation-for="Isim" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Soyisim</label>
+            <input asp-for="Soyisim" placeholder="Soyisim" class="form-control" />
+            <span asp-validation-for="Soyisim" class="text-danger"></span>
+        </div>
+    </div>
+    
+    <div class="form-row">
+        <div class="form-group">
+            <label class="form-label">Email</label>
+            <input asp-for="Email" placeholder="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Telefon</label>
+            <input asp-for="Telefon" placeholder="Telefon" class="form-control" />
+            <span asp-validation-for="Telefon" class="text-danger"></span>
+        </div>
+    </div>
+    
+    <div class="form-row">
+        <div class="form-group">
+            <label class="form-label">Şifre</label>
+            <input asp-for="Sifre" placeholder="Şifre" type="password" class="form-control" />
+            <span asp-validation-for="Sifre" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Şifre Tekrar</label>
+            <input asp-for="SifreTekrar" placeholder="Şifre Tekrar" type="password" class="form-control" />
+            <span asp-validation-for="SifreTekrar" class="text-danger"></span>
+        </div>
+    </div>
+    
+    <div class="text-center mt-3">
+        <button type="submit" class="btn-add-user">
+            <i class="fas fa-user-plus me-2"></i>
+            Kullanıcı Ekle
+        </button>
+    </div>
+</form> 

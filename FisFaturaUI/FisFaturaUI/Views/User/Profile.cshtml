@@ -1,0 +1,290 @@
+@model FisFaturaUI.Models.UserRegisterViewModel
+
+<style>
+    .profile-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .profile-header {
+        text-align: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid #f8f9fa;
+    }
+    
+    .profile-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+    }
+    
+    .profile-subtitle {
+        color: #6c757d;
+        font-size: 1rem;
+    }
+    
+    .profile-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        padding: 2rem;
+        border: 1px solid #e9ecef;
+    }
+    
+    .form-section {
+        margin-bottom: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #667eea;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+    
+    .form-label {
+        font-weight: 500;
+        color: #495057;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+    
+    .form-control {
+        border: 2px solid #e9ecef;
+        border-radius: 8px;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background: #f8f9fa;
+    }
+    
+    .form-control:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        background: #fff;
+    }
+    
+    .form-control:disabled {
+        background: #e9ecef;
+        color: #6c757d;
+    }
+    
+    .btn-update {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        color: white;
+        padding: 0.75rem 2rem;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .btn-update:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        color: white;
+    }
+    
+    .alert {
+        border-radius: 8px;
+        border: none;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .alert-success {
+        background: linear-gradient(135deg, #d4edda, #c3e6cb);
+        color: #155724;
+        border-left: 4px solid #28a745;
+    }
+    
+    .alert-danger {
+        background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+        color: #721c24;
+        border-left: 4px solid #dc3545;
+    }
+    
+    .validation-summary {
+        background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+        color: #856404;
+        border-left: 4px solid #ffc107;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .input-group {
+        position: relative;
+    }
+    
+    .input-icon {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #6c757d;
+        z-index: 10;
+    }
+    
+    .input-with-icon {
+        padding-left: 2.5rem;
+    }
+</style>
+
+<div class="profile-container">
+    <div class="profile-header">
+        <h1 class="profile-title">
+            <i class="fas fa-user-circle me-2"></i>
+            Hesabım
+        </h1>
+        <p class="profile-subtitle">Kişisel bilgilerinizi güncelleyin</p>
+    </div>
+
+    <div class="profile-card">
+        @Html.ValidationSummary(true, "", new { @class = "validation-summary" })
+        @if (ViewBag.Success != null) 
+        { 
+            <div class="alert alert-success">
+                <i class="fas fa-check-circle me-2"></i>
+                @ViewBag.Success
+            </div> 
+        }
+        @if (ViewBag.Error != null) 
+        { 
+            <div class="alert alert-danger">
+                <i class="fas fa-exclamation-triangle me-2"></i>
+                @ViewBag.Error
+            </div> 
+        }
+
+        <form asp-action="Profile" method="post">
+            <!-- Kişisel Bilgiler -->
+            <div class="form-section">
+                <h3 class="section-title">
+                    <i class="fas fa-user"></i>
+                    Kişisel Bilgiler
+                </h3>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="TcKimlikNo" class="form-label">
+                                <i class="fas fa-id-card me-1"></i>
+                                TC Kimlik No
+                            </label>
+                            <div class="input-group">
+                                <i class="fas fa-id-card input-icon"></i>
+                                <input asp-for="TcKimlikNo" class="form-control input-with-icon" autocomplete="off" disabled />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Telefon" class="form-label">
+                                <i class="fas fa-phone me-1"></i>
+                                Telefon
+                            </label>
+                            <div class="input-group">
+                                <i class="fas fa-phone input-icon"></i>
+                                <input asp-for="Telefon" class="form-control input-with-icon" autocomplete="tel" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Isim" class="form-label">
+                                <i class="fas fa-user me-1"></i>
+                                Ad
+                            </label>
+                            <div class="input-group">
+                                <i class="fas fa-user input-icon"></i>
+                                <input asp-for="Isim" class="form-control input-with-icon" autocomplete="given-name" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Soyisim" class="form-label">
+                                <i class="fas fa-user me-1"></i>
+                                Soyad
+                            </label>
+                            <div class="input-group">
+                                <i class="fas fa-user input-icon"></i>
+                                <input asp-for="Soyisim" class="form-control input-with-icon" autocomplete="family-name" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Email" class="form-label">
+                        <i class="fas fa-envelope me-1"></i>
+                        E-posta
+                    </label>
+                    <div class="input-group">
+                        <i class="fas fa-envelope input-icon"></i>
+                        <input asp-for="Email" class="form-control input-with-icon" autocomplete="email" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Şifre Değiştirme -->
+            <div class="form-section">
+                <h3 class="section-title">
+                    <i class="fas fa-lock"></i>
+                    Şifre Değiştirme
+                </h3>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Sifre" class="form-label">
+                                <i class="fas fa-key me-1"></i>
+                                Yeni Şifre
+                            </label>
+                            <div class="input-group">
+                                <i class="fas fa-key input-icon"></i>
+                                <input asp-for="Sifre" class="form-control input-with-icon" type="password" autocomplete="new-password" placeholder="Yeni şifrenizi girin" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="SifreTekrar" class="form-label">
+                                <i class="fas fa-key me-1"></i>
+                                Şifre Tekrar
+                            </label>
+                            <div class="input-group">
+                                <i class="fas fa-key input-icon"></i>
+                                <input asp-for="SifreTekrar" class="form-control input-with-icon" type="password" autocomplete="new-password" placeholder="Şifrenizi tekrar girin" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-update">
+                <i class="fas fa-save me-2"></i>
+                Bilgileri Güncelle
+            </button>
+        </form>
+    </div>
+</div> 

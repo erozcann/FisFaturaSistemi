@@ -1,0 +1,177 @@
+@if (ViewBag.Debug != null)
+{
+    <h1 style="color: red; font-size: 32px;">@ViewBag.Debug</h1>
+}
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+@model FisFaturaUI.Models.ReceiptUploadViewModel
+@{
+    ViewData["Title"] = "Fiş Yükle";
+}
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h4>Yeni Fiş Ekle</h4>
+        </div>
+        <div class="card-body">
+            @if (Model != null && !string.IsNullOrEmpty(Model.FaturaResimYolu))
+            {
+                <div class="mb-3 text-center">
+                    <img src="@Model.FaturaResimYolu" alt="Fiş Görseli" style="max-width: 300px; max-height: 300px; border: 1px solid #ccc; border-radius: 8px;" />
+                </div>
+            }
+            <form id="receiptForm" asp-action="ReceiptUpload" method="post" enctype="multipart/form-data">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Fiş/Fatura Dosyası</label>
+                        <input type="file" id="receiptFile" class="form-control" accept="image/*,application/pdf">
+                        <div id="ocr-spinner" class="spinner-border text-primary mt-2" role="status" style="display: none;">
+                            <span class="visually-hidden">Okunuyor...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card p-3 mb-3">
+                    <h5 class="card-title">Firma Bilgileri</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label asp-for="FirmaAdi" class="form-label">Firma Adı</label>
+                            <input asp-for="FirmaAdi" class="form-control" />
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="VergiNo" class="form-label">Vergi/TCKN Numarası</label>
+                            <input asp-for="VergiNo" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label asp-for="FisNo" class="form-label">Fiş Numarası</label>
+                        <input asp-for="FisNo" class="form-control" />
+                    </div>
+                    <div class="col-md-4">
+                        <label asp-for="Tarih" class="form-label">Tarih</label>
+                        <input asp-for="Tarih" type="date" class="form-control" />
+                    </div>
+                    <div class="col-md-4">
+                        <label asp-for="ToplamTutar" class="form-label">Toplam Tutar</label>
+                        <input asp-for="ToplamTutar" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label asp-for="IcerikTuru" class="form-label">İçerik Türü</label>
+                        <select asp-for="IcerikTuru" class="form-select" asp-items="@(new SelectList(Model.IcerikTurleri))"></select>
+                    </div>
+                    <div class="col-md-4">
+                        <label asp-for="OdemeSekli" class="form-label">Ödeme Şekli</label>
+                        <select asp-for="OdemeSekli" class="form-select" asp-items="@(new SelectList(Model.OdemeSekilleri))"></select>
+                    </div>
+                     <div class="col-md-4">
+                        <label asp-for="GelirGider" class="form-label">Gelir/Gider</label>
+                        <select asp-for="GelirGider" class="form-select" asp-items="@(new SelectList(Model.GelirGiderSecenekleri))"></select>
+                    </div>
+                </div>
+
+                <div class="card p-3">
+                    <h5 class="card-title">KDV Detayları</h5>
+                    <div class="row">
+                        @{
+                            var kdvOranlari = new[] { "0", "1", "8", "10", "18", "20" };
+                        }
+                        @foreach (var oran in kdvOranlari)
+                        {
+                            <div class="col-md-2">
+                                <label class="form-label">%@oran KDV</label>
+                                <input id="kdv-@oran" name="KdvOranlari[@oran]" class="form-control" value="0.00" />
+                                <label class="form-label">Matrah</label>
+                                <input id="matrah-@oran" name="MatrahOranlari[@oran]" class="form-control" value="0.00" />
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                    <a asp-action="List" class="btn btn-secondary">İptal</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#receiptFile').on('change', function () {
+                var file = this.files[0];
+                if (!file) {
+                    return;
+                }
+
+                var formData = new FormData();
+                formData.append('file', file);
+
+                $('#ocr-spinner').show();
+
+                $.ajax({
+                    url: '@Url.Action("ProcessReceiptOcr", "Invoice")',
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function (response) {
+                        $('#ocr-spinner').hide();
+                        
+                        if (response.success) {
+                            var data = response.data;
+                            console.log("OCR Data:", data);
+
+                            $('#FirmaAdi').val(data.firmaAdi);
+                            $('#VergiNo').val(data.vergiNo);
+                            $('#FisNo').val(data.fisNo);
+
+                            if (data.tarih) {
+                                var date = new Date(data.tarih);
+                                $('#Tarih').val(date.toISOString().split('T')[0]);
+                            }
+                            
+                            $('#ToplamTutar').val(data.toplamTutar);
+                            
+                            $('input[id^="kdv-"], input[id^="matrah-"]').val('0.00');
+
+                            if (data.kdvOranlari) {
+                                for (const rate in data.kdvOranlari) {
+                                    $('#kdv-' + rate).val(data.kdvOranlari[rate]);
+                                }
+                            }
+                            if (data.matrahOranlari) {
+                                for (const rate in data.matrahOranlari) {
+                                    $('#matrah-' + rate).val(data.matrahOranlari[rate]);
+                                }
+                            }
+
+                        } else {
+                            alert('OCR işlemi başarısız: ' + (response.message || 'Bilinmeyen API hatası.'));
+                        }
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        $('#ocr-spinner').hide();
+                        var errorMessage = "Dosya yüklenirken bir sunucu hatası oluştu.";
+                        if (jqXHR.responseJSON && jqXHR.responseJSON.message) {
+                            errorMessage = jqXHR.responseJSON.message;
+                        } else if (jqXHR.responseText) {
+                            errorMessage = jqXHR.responseText;
+                        }
+                        alert('Hata: ' + errorMessage);
+                    }
+                });
+            });
+        });
+    </script>
+} 

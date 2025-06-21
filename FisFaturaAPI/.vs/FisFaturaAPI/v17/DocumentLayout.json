@@ -1,0 +1,437 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\services\\ocrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\services\\ocrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\services\\iocrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\services\\iocrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\models\\updatefirmdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\models\\updatefirmdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\models\\reportrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\models\\reportrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\models\\ocrresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\models\\ocrresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\models\\ocrinvoicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\models\\ocrinvoicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\models\\firm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\models\\firm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\models\\createfirmdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\models\\createfirmdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\migrations\\20250609175200_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\migrations\\20250609175200_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\data\\migrations\\20250610150337_updateusermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\data\\migrations\\20250610150337_updateusermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\controllers\\firmcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\controllers\\firmcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\controllers\\faturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\controllers\\faturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaapi\\fisfaturaapi\\fisfaturaapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7938B135-5B25-4187-8D45-164A8A03FD72}|FisFaturaAPI\\FisFaturaAPI.csproj|solutionrelative:fisfaturaapi\\fisfaturaapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Models\\Receipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FisFaturaAPI\\Models\\Receipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IOcrService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Services\\IOcrService.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Services\\IOcrService.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Services\\IOcrService.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Services\\IOcrService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T06:57:19.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ReportRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Models\\ReportRequestDto.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Models\\ReportRequestDto.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Models\\ReportRequestDto.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Models\\ReportRequestDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T06:56:52.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdateFirmDto.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Models\\UpdateFirmDto.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Models\\UpdateFirmDto.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Models\\UpdateFirmDto.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Models\\UpdateFirmDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T06:56:51.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Receipt.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Models\\Receipt.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Models\\Receipt.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Models\\Receipt.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Models\\Receipt.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T06:56:34.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OcrResult.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Models\\OcrResult.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Models\\OcrResult.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Models\\OcrResult.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Models\\OcrResult.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAUwCUAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T06:56:12.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OcrService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Services\\OcrService.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Services\\OcrService.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Services\\OcrService.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Services\\OcrService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T14:24:14.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AQIAACIBAAAAAAAAAAAUwEMBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T18:08:25.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Models\\User.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Models\\User.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T12:54:21.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateFirmDto.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Models\\CreateFirmDto.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Models\\CreateFirmDto.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Models\\CreateFirmDto.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Models\\CreateFirmDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T16:15:04.798Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Firm.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Models\\Firm.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Models\\Firm.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Models\\Firm.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Models\\Firm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T12:54:39.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OcrInvoiceDto.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Models\\OcrInvoiceDto.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Models\\OcrInvoiceDto.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Models\\OcrInvoiceDto.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Models\\OcrInvoiceDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T14:23:28.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20250609175200_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Migrations\\20250609175200_InitialCreate.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Migrations\\20250609175200_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Migrations\\20250609175200_InitialCreate.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Migrations\\20250609175200_InitialCreate.cs",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAUwJIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T22:56:59.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Invoice.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Models\\Invoice.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Models\\Invoice.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Models\\Invoice.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Models\\Invoice.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAUwDUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T12:54:58.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "20250610150337_UpdateUserModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Data\\Migrations\\20250610150337_UpdateUserModel.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Data\\Migrations\\20250610150337_UpdateUserModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Data\\Migrations\\20250610150337_UpdateUserModel.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Data\\Migrations\\20250610150337_UpdateUserModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T06:54:46.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Controllers\\UserController.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Controllers\\UserController.cs",
+              "ViewState": "AQIAACsBAAAAAAAAAAAUwEwBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T18:15:12.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ReportController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Controllers\\ReportController.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Controllers\\ReportController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Controllers\\ReportController.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Controllers\\ReportController.cs",
+              "ViewState": "AQIAAG0AAAAAAAAAAAAUwI4AAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T06:54:20.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "InvoiceController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Controllers\\InvoiceController.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Controllers\\InvoiceController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Controllers\\InvoiceController.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Controllers\\InvoiceController.cs",
+              "ViewState": "AQIAAHUBAAAAAAAAAAAUwJYBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T13:12:27.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FirmController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Controllers\\FirmController.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Controllers\\FirmController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Controllers\\FirmController.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Controllers\\FirmController.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAUwGIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T13:11:38.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T14:36:23.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FaturaController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Controllers\\FaturaController.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Controllers\\FaturaController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Controllers\\FaturaController.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Controllers\\FaturaController.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAUwCsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T14:18:41.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Controllers\\DashboardController.cs",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAUwIAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T02:31:19.291Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAiwB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T12:52:28.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Program.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\Program.cs",
+              "RelativeToolTip": "FisFaturaAPI\\Program.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAowDMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T12:52:47.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\appsettings.json",
+              "RelativeToolTip": "FisFaturaAPI\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-07T12:57:24.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\WeatherForecast.cs",
+              "RelativeToolTip": "FisFaturaAPI\\WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T14:31:04.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "FisFaturaAPI.csproj",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\FisFaturaAPI.csproj",
+              "RelativeDocumentMoniker": "FisFaturaAPI\\FisFaturaAPI.csproj",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaAPI\\FisFaturaAPI\\FisFaturaAPI.csproj",
+              "RelativeToolTip": "FisFaturaAPI\\FisFaturaAPI.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-07T12:53:54.969Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

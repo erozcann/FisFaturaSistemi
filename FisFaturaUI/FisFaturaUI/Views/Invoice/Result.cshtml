@@ -1,0 +1,29 @@
+﻿@model FisFaturaUI.Models.OcrInvoiceViewModel
+
+@{
+    ViewData["Title"] = "Fatura OCR Sonucu";
+}
+
+<h2>📄 Fatura OCR Sonucu</h2>
+
+<table class="table table-bordered">
+    <tr><th>Firma Adı</th><td>@Model.FirmaAdi</td></tr>
+    <tr><th>Vergi No</th><td>@Model.VergiNo</td></tr>
+    <tr><th>Fatura No</th><td>@Model.FaturaNo</td></tr>
+    <tr><th>Fatura Tarihi</th><td>@Model.FaturaTarihi</td></tr>
+    <tr><th>Toplam Tutar</th><td>@Model.ToplamTutar</td></tr>
+    <tr><th>Ödeme Türü</th><td>@Model.OdemeTuru</td></tr>
+    <tr><th>İçerik Türü</th><td>@Model.IcerikTuru</td></tr>
+</table>
+
+<form asp-action="Save" method="post">
+    @Html.HiddenFor(m => m.FirmaAdi)
+    @Html.HiddenFor(m => m.VergiNo)
+    @Html.HiddenFor(m => m.FaturaNo)
+    @Html.HiddenFor(m => m.FaturaTarihi)
+    @Html.HiddenFor(m => m.ToplamTutar)
+    @Html.HiddenFor(m => m.OdemeTuru)
+    @Html.HiddenFor(m => m.IcerikTuru)
+
+    <button type="submit" class="btn btn-success">💾 Veritabanına Kaydet</button>
+</form>

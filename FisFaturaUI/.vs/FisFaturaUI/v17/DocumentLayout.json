@@ -1,0 +1,469 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\wwwroot\\images\\gallery\\gallery-6.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\wwwroot\\images\\gallery\\gallery-6.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\wwwroot\\images\\gallery\\gallery-4.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\wwwroot\\images\\gallery\\gallery-4.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\wwwroot\\images\\gallery\\gallery-1.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\wwwroot\\images\\gallery\\gallery-1.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\wwwroot\\images\\landing-hero.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\wwwroot\\images\\landing-hero.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\wwwroot\\images\\logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\wwwroot\\images\\logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\wwwroot\\images\\gallery\\gallery-5.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\wwwroot\\images\\gallery\\gallery-5.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\wwwroot\\images\\gallery\\gallery-2.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\wwwroot\\images\\gallery\\gallery-2.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\views\\user\\_userregisterpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\views\\user\\_userregisterpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\views\\invoice\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\views\\invoice\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\controllers\\firmcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\controllers\\firmcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\views\\invoice\\upload.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\views\\invoice\\upload.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\fisfaturaui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\fisfaturaui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\views\\dashboard\\firmalarim.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\views\\dashboard\\firmalarim.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\models\\userregisterviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\models\\userregisterviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\models\\userloginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\models\\userloginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\views\\user\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\views\\user\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\views\\invoice\\result.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\views\\invoice\\result.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\views\\invoice\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\views\\invoice\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\models\\invoicelistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\models\\invoicelistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|c:\\users\\admin\\source\\repos\\fisfaturaui\\fisfaturaui\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5344BEC5-F781-4EEA-8ECF-C2482F7AFBD9}|FisFaturaUI\\FisFaturaUI.csproj|solutionrelative:fisfaturaui\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "gallery-4.jpg - Bitmap [1600x538, 24 bit, JPG]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\wwwroot\\images\\gallery\\gallery-4.jpg",
+              "RelativeDocumentMoniker": "FisFaturaUI\\wwwroot\\images\\gallery\\gallery-4.jpg",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\wwwroot\\images\\gallery\\gallery-4.jpg - Bitmap [1600x538, 24 bit, JPG]",
+              "RelativeToolTip": "FisFaturaUI\\wwwroot\\images\\gallery\\gallery-4.jpg - Bitmap [1600x538, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-06-20T01:33:51.873Z",
+              "EditorCaption": " - Bitmap [1600x538, 24 bit, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "gallery-6.png - PNG [1917x908, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\wwwroot\\images\\gallery\\gallery-6.png",
+              "RelativeDocumentMoniker": "FisFaturaUI\\wwwroot\\images\\gallery\\gallery-6.png",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\wwwroot\\images\\gallery\\gallery-6.png - PNG [1917x908, 32 bit, PNG]",
+              "RelativeToolTip": "FisFaturaUI\\wwwroot\\images\\gallery\\gallery-6.png - PNG [1917x908, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-06-20T01:40:06.018Z",
+              "EditorCaption": " - PNG [1917x908, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Program.cs",
+              "RelativeDocumentMoniker": "FisFaturaUI\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Program.cs",
+              "RelativeToolTip": "FisFaturaUI\\Program.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAADcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T14:54:23.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\appsettings.json",
+              "RelativeDocumentMoniker": "FisFaturaUI\\appsettings.json",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\appsettings.json",
+              "RelativeToolTip": "FisFaturaUI\\appsettings.json",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-08T14:52:56.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "gallery-1.jpg - Bitmap [1600x733, 24 bit, JPG]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\wwwroot\\images\\gallery\\gallery-1.jpg",
+              "RelativeDocumentMoniker": "FisFaturaUI\\wwwroot\\images\\gallery\\gallery-1.jpg",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\wwwroot\\images\\gallery\\gallery-1.jpg - Bitmap [1600x733, 24 bit, JPG]",
+              "RelativeToolTip": "FisFaturaUI\\wwwroot\\images\\gallery\\gallery-1.jpg - Bitmap [1600x733, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-06-20T01:27:06.458Z",
+              "EditorCaption": " - Bitmap [1600x733, 24 bit, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\User\\Register.cshtml",
+              "RelativeDocumentMoniker": "FisFaturaUI\\Views\\User\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\User\\Register.cshtml",
+              "RelativeToolTip": "FisFaturaUI\\Views\\User\\Register.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-09T17:56:43.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "gallery-5.png - PNG [1626x439, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\wwwroot\\images\\gallery\\gallery-5.png",
+              "RelativeDocumentMoniker": "FisFaturaUI\\wwwroot\\images\\gallery\\gallery-5.png",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\wwwroot\\images\\gallery\\gallery-5.png - PNG [1626x439, 32 bit, PNG]",
+              "RelativeToolTip": "FisFaturaUI\\wwwroot\\images\\gallery\\gallery-5.png - PNG [1626x439, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-06-20T01:33:52.585Z",
+              "EditorCaption": " - PNG [1626x439, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "logo.png - PNG [1024x1024, 24 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\wwwroot\\images\\logo.png",
+              "RelativeDocumentMoniker": "FisFaturaUI\\wwwroot\\images\\logo.png",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\wwwroot\\images\\logo.png - PNG [1024x1024, 24 bit, PNG]",
+              "RelativeToolTip": "FisFaturaUI\\wwwroot\\images\\logo.png - PNG [1024x1024, 24 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-06-20T01:34:31.599Z",
+              "EditorCaption": " - PNG [1024x1024, 24 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "landing-hero.png - PNG [1536x1024, 24 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\wwwroot\\images\\landing-hero.png",
+              "RelativeDocumentMoniker": "FisFaturaUI\\wwwroot\\images\\landing-hero.png",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\wwwroot\\images\\landing-hero.png - PNG [1536x1024, 24 bit, PNG]",
+              "RelativeToolTip": "FisFaturaUI\\wwwroot\\images\\landing-hero.png - PNG [1536x1024, 24 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-06-20T01:06:04.656Z",
+              "EditorCaption": " - PNG [1536x1024, 24 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "gallery-2.jpg - Bitmap [1600x551, 24 bit, JPG]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\wwwroot\\images\\gallery\\gallery-2.jpg",
+              "RelativeDocumentMoniker": "FisFaturaUI\\wwwroot\\images\\gallery\\gallery-2.jpg",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\wwwroot\\images\\gallery\\gallery-2.jpg - Bitmap [1600x551, 24 bit, JPG]",
+              "RelativeToolTip": "FisFaturaUI\\wwwroot\\images\\gallery\\gallery-2.jpg - Bitmap [1600x551, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-06-20T01:33:39.372Z",
+              "EditorCaption": " - Bitmap [1600x551, 24 bit, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_UserRegisterPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\User\\_UserRegisterPartial.cshtml",
+              "RelativeDocumentMoniker": "FisFaturaUI\\Views\\User\\_UserRegisterPartial.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\User\\_UserRegisterPartial.cshtml",
+              "RelativeToolTip": "FisFaturaUI\\Views\\User\\_UserRegisterPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-19T21:05:43.744Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Upload.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\Invoice\\Upload.cshtml",
+              "RelativeDocumentMoniker": "FisFaturaUI\\Views\\Invoice\\Upload.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\Invoice\\Upload.cshtml",
+              "RelativeToolTip": "FisFaturaUI\\Views\\Invoice\\Upload.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T15:03:12.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\Invoice\\Create.cshtml",
+              "RelativeDocumentMoniker": "FisFaturaUI\\Views\\Invoice\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\Invoice\\Create.cshtml",
+              "RelativeToolTip": "FisFaturaUI\\Views\\Invoice\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T15:36:09.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "InvoiceController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Controllers\\InvoiceController.cs",
+              "RelativeDocumentMoniker": "FisFaturaUI\\Controllers\\InvoiceController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Controllers\\InvoiceController.cs",
+              "RelativeToolTip": "FisFaturaUI\\Controllers\\InvoiceController.cs",
+              "ViewState": "AQIAAJoBAAAAAAAAAAAmwLMAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T15:02:20.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "FisFaturaUI\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Controllers\\UserController.cs",
+              "RelativeToolTip": "FisFaturaUI\\Controllers\\UserController.cs",
+              "ViewState": "AQIAALwAAAAAAAAAAAAAADsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T17:56:14.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FirmController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Controllers\\FirmController.cs",
+              "RelativeDocumentMoniker": "FisFaturaUI\\Controllers\\FirmController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Controllers\\FirmController.cs",
+              "RelativeToolTip": "FisFaturaUI\\Controllers\\FirmController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T21:10:30.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "FisFaturaUI\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "FisFaturaUI\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAKMAAAAAAAAAAAAcwMkAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-09T17:58:26.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UserRegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Models\\UserRegisterViewModel.cs",
+              "RelativeDocumentMoniker": "FisFaturaUI\\Models\\UserRegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Models\\UserRegisterViewModel.cs",
+              "RelativeToolTip": "FisFaturaUI\\Models\\UserRegisterViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T17:54:11.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FisFaturaUI.csproj",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\FisFaturaUI.csproj",
+              "RelativeDocumentMoniker": "FisFaturaUI\\FisFaturaUI.csproj",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\FisFaturaUI.csproj",
+              "RelativeToolTip": "FisFaturaUI\\FisFaturaUI.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-13T14:26:31.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UserLoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Models\\UserLoginViewModel.cs",
+              "RelativeDocumentMoniker": "FisFaturaUI\\Models\\UserLoginViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Models\\UserLoginViewModel.cs",
+              "RelativeToolTip": "FisFaturaUI\\Models\\UserLoginViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T17:55:31.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Firmalarim.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\Dashboard\\Firmalarim.cshtml",
+              "RelativeDocumentMoniker": "FisFaturaUI\\Views\\Dashboard\\Firmalarim.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\Dashboard\\Firmalarim.cshtml",
+              "RelativeToolTip": "FisFaturaUI\\Views\\Dashboard\\Firmalarim.cshtml",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-10T15:52:59.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "FisFaturaUI\\Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "FisFaturaUI\\Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-10T15:53:00.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\User\\Login.cshtml",
+              "RelativeDocumentMoniker": "FisFaturaUI\\Views\\User\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\User\\Login.cshtml",
+              "RelativeToolTip": "FisFaturaUI\\Views\\User\\Login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-09T17:57:12.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "DashBoard.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\User\\DashBoard.cshtml",
+              "RelativeDocumentMoniker": "FisFaturaUI\\Views\\User\\DashBoard.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\User\\DashBoard.cshtml",
+              "RelativeToolTip": "FisFaturaUI\\Views\\User\\DashBoard.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-09T17:58:00.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "InvoiceListViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Models\\InvoiceListViewModel.cs",
+              "RelativeDocumentMoniker": "FisFaturaUI\\Models\\InvoiceListViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Models\\InvoiceListViewModel.cs",
+              "RelativeToolTip": "FisFaturaUI\\Models\\InvoiceListViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T16:11:19.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\Invoice\\List.cshtml",
+              "RelativeDocumentMoniker": "FisFaturaUI\\Views\\Invoice\\List.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\Invoice\\List.cshtml",
+              "RelativeToolTip": "FisFaturaUI\\Views\\Invoice\\List.cshtml",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAmwB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T16:08:55.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Result.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\Invoice\\Result.cshtml",
+              "RelativeDocumentMoniker": "FisFaturaUI\\Views\\Invoice\\Result.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Views\\Invoice\\Result.cshtml",
+              "RelativeToolTip": "FisFaturaUI\\Views\\Invoice\\Result.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T15:04:07.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "FisFaturaUI\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\FisFaturaUI\\FisFaturaUI\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "FisFaturaUI\\Models\\ErrorViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T13:19:49.902Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

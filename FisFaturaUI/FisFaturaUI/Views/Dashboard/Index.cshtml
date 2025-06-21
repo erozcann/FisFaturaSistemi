@@ -1,0 +1,326 @@
+@model FisFaturaUI.Models.DashboardViewModel
+@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<style>
+    .dashboard-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 15px;
+    }
+    
+    .kpi-card {
+        background: linear-gradient(135deg, #ffffff, #f8f9fa);
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        height: 100%;
+    }
+    
+    .kpi-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .kpi-card .card-body {
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    .kpi-card-icon {
+        font-size: 1.5rem;
+        color: #fff;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 0.75rem;
+        box-shadow: 0 3px 8px rgba(102, 126, 234, 0.3);
+    }
+    
+    .kpi-card-icon.income {
+        background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        box-shadow: 0 3px 8px rgba(17, 153, 142, 0.3);
+    }
+    
+    .kpi-card-icon.expense {
+        background: linear-gradient(135deg, #fc466b 0%, #3f5efb 100%);
+        box-shadow: 0 3px 8px rgba(252, 70, 107, 0.3);
+    }
+    
+    .kpi-card-icon.firms {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        box-shadow: 0 3px 8px rgba(102, 126, 234, 0.3);
+    }
+    
+    .kpi-card .card-title {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #6c757d;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    .kpi-card .card-text {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin: 0;
+    }
+    
+    .chart-container {
+        background: #fff;
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        margin-bottom: 1rem;
+        height: 280px;
+    }
+    
+    .chart-title {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid #f8f9fa;
+    }
+    
+    .page-header {
+        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid #e9ecef;
+    }
+    
+    .page-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin: 0;
+    }
+    
+    .stats-summary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 0.75rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    .stats-summary h6 {
+        margin: 0;
+        font-size: 0.8rem;
+        opacity: 0.9;
+    }
+    
+    .stats-summary .total {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-top: 0.25rem;
+    }
+</style>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="fw-bold">Hoş Geldiniz, @Context.Session.GetString("Isim")!</h4>
+    <div>
+        <button class="btn btn-primary" onclick="setEklemeTipi('Fatura')">
+            <i class="fas fa-plus me-2"></i>Yeni Fatura Ekle
+        </button>
+        <button class="btn btn-success" onclick="setEklemeTipi('Fiş')">
+            <i class="fas fa-receipt me-2"></i>Yeni Fiş Ekle
+        </button>
+    </div>
+</div>
+
+<div class="dashboard-container">
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1 class="page-title">@ViewData["Title"]</h1>
+    </div>
+
+    @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+    {
+        <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+    }
+
+    <!-- Stats Summary -->
+    <div class="stats-summary">
+        <h6>Bu Ayki Net Durum</h6>
+        <div class="total">
+            @((Model.Stats.MonthlyIncome - Model.Stats.MonthlyExpense).ToString("C", new System.Globalization.CultureInfo("tr-TR")))
+        </div>
+    </div>
+
+    <!-- KPI Cards -->
+    <div class="row g-3 mb-4">
+        <div class="col-lg-3 col-md-6">
+            <div class="kpi-card">
+                <div class="card-body">
+                    <div class="kpi-card-icon">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <div class="card-title">Toplam Fatura</div>
+                    <div class="card-text">@Model.Stats.TotalInvoices</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="kpi-card">
+                <div class="card-body">
+                    <div class="kpi-card-icon income">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="card-title">Bu Ayki Gelir</div>
+                    <div class="card-text">@Model.Stats.MonthlyIncome.ToString("C", new System.Globalization.CultureInfo("tr-TR"))</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="kpi-card">
+                <div class="card-body">
+                    <div class="kpi-card-icon expense">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="card-title">Bu Ayki Gider</div>
+                    <div class="card-text">@Model.Stats.MonthlyExpense.ToString("C", new System.Globalization.CultureInfo("tr-TR"))</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="kpi-card">
+                <div class="card-body">
+                    <div class="kpi-card-icon firms">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="card-title">Toplam Firma</div>
+                    <div class="card-text">@Model.Stats.TotalFirms</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="chart-container">
+                <h5 class="chart-title">Son 6 Aylık Gelir & Gider Akışı</h5>
+                <canvas id="monthlySummaryChart" height="200"></canvas>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="chart-container">
+                <h5 class="chart-title">Fatura Türü Dağılımı</h5>
+                <canvas id="invoiceTypeChart" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+@await Html.PartialAsync("_FirmaSecModal", Model.Firms)
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Data from ViewModel
+        const monthlySummaryData = @Html.Raw(Model.MonthlySummaryJson);
+        const invoiceTypeData = @Html.Raw(Model.InvoiceTypeSummaryJson);
+
+        // --- Monthly Summary Chart (Bar) ---
+        const monthlyCtx = document.getElementById('monthlySummaryChart').getContext('2d');
+        const monthlyLabels = monthlySummaryData.map(d => d.month);
+        const incomeData = monthlySummaryData.map(d => d.income);
+        const expenseData = monthlySummaryData.map(d => d.expense);
+
+        new Chart(monthlyCtx, {
+            type: 'bar',
+            data: {
+                labels: monthlyLabels,
+                datasets: [
+                    {
+                        label: 'Gelir',
+                        data: incomeData,
+                        backgroundColor: 'rgba(39, 174, 96, 0.8)',
+                        borderColor: 'rgba(39, 174, 96, 1)',
+                        borderWidth: 1,
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'Gider',
+                        data: expenseData,
+                        backgroundColor: 'rgba(192, 57, 43, 0.8)',
+                        borderColor: 'rgba(192, 57, 43, 1)',
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value, index, values) {
+                                return new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'TRY' }).format(value);
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+
+        // --- Invoice Type Chart (Doughnut) ---
+        const invoiceTypeCtx = document.getElementById('invoiceTypeChart').getContext('2d');
+        const invoiceTypeLabels = invoiceTypeData.map(d => d.faturaTuru);
+        const invoiceTypeCounts = invoiceTypeData.map(d => d.count);
+        
+        // Generate dynamic colors for pie chart
+        function generateColors(count) {
+            const colors = [
+                '#3498db', '#2ecc71', '#e74c3c', '#9b59b6', '#f1c40f', 
+                '#1abc9c', '#e67e22', '#34495e', '#d35400', '#2980b9'
+            ];
+            let result = [];
+            for(let i = 0; i < count; i++) {
+                result.push(colors[i % colors.length]);
+            }
+            return result;
+        }
+
+        new Chart(invoiceTypeCtx, {
+            type: 'doughnut',
+            data: {
+                labels: invoiceTypeLabels,
+                datasets: [{
+                    label: 'Fatura Sayısı',
+                    data: invoiceTypeCounts,
+                    backgroundColor: generateColors(invoiceTypeCounts.length),
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    }
+                }
+            }
+        });
+    </script>
+} 

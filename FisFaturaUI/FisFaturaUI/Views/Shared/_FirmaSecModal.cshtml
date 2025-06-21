@@ -1,0 +1,42 @@
+@model List<FisFaturaUI.Models.FirmViewModel>
+
+<div class="modal fade" id="firmaSecModal" tabindex="-1" aria-labelledby="firmaSecModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="firmaSecModalLabel">İşlem Yapılacak Firmayı Seçin</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Lütfen fatura/fiş kesilecek firmayı seçin veya yeni firma ekleyin.</p>
+                <div class="mb-3">
+                    <label for="firmaSelect" class="form-label">Kayıtlı Firmalar</label>
+                    <select id="firmaSelect" class="form-select">
+                        <option value="">Firma Seçiniz...</option>
+                        @if (Model != null)
+                        {
+                            @foreach (var firma in Model)
+                            {
+                                <option value="@firma.Id" data-vergi="@firma.VergiNo" data-tarih="@firma.KayitTarihi.ToShortDateString()">
+                                    @firma.FirmaAdi
+                                </option>
+                            }
+                        }
+                    </select>
+                </div>
+                <div id="firmaInfo" class="mt-3 p-3 border rounded bg-light" style="display: none;">
+                    <h6>Firma Bilgileri</h6>
+                    <p><strong>Vergi No:</strong> <span id="selectedVergiNo"></span></p>
+                    <p><strong>Kayıt Tarihi:</strong> <span id="selectedTarih"></span></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                <a asp-controller="Firm" asp-action="Create" class="btn btn-success">Yeni Firma Ekle</a>
+                <button type="button" class="btn btn-primary" id="firmaSecDevamBtn" disabled>Devam Et</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Örnek kullanım: @await Html.PartialAsync("_FirmaSecModal", Model.Firms) *@ 

@@ -1,0 +1,263 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+@{
+    var userId = HttpContextAccessor.HttpContext.Session.GetInt32("UserId");
+    var apiBaseUrl = Configuration.GetValue<string>("ApiSettings:BaseUrl");
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FisFaturaUI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        :root {
+            --sidebar-bg: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+            --navbar-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --active-item-bg: linear-gradient(135deg, #764ba2, #6B47A3);
+            --hover-item-before-bg: linear-gradient(90deg, #764ba2, #667eea);
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            background-color: #f8fafc;
+        }
+
+        #wrapper {
+            display: flex;
+            width: 100%;
+            flex-grow: 1;
+        }
+
+        #sidebar-wrapper {
+            min-width: 280px;
+            max-width: 280px;
+            background: var(--sidebar-bg);
+            color: white;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1000;
+        }
+
+        .sidebar-heading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2.5rem 1.5rem 2rem 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar-heading img {
+            height: 90px;
+            width: 90px;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.15);
+            padding: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .sidebar-heading img:hover {
+            transform: scale(1.05) translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .sidebar-heading span {
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            font-size: 1.1rem;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        #sidebar-wrapper .list-group {
+            width: 100%;
+            flex-grow: 1;
+            padding: 1rem 0;
+        }
+
+        #sidebar-wrapper .list-group-item {
+            background-color: transparent;
+            color: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 1rem 1.5rem;
+            margin: 0.25rem 1rem;
+            border-radius: 12px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #sidebar-wrapper .list-group-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0;
+            background: var(--hover-item-before-bg);
+            transition: width 0.3s ease;
+            z-index: -1;
+        }
+
+        #sidebar-wrapper .list-group-item:hover {
+            color: white;
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #sidebar-wrapper .list-group-item:hover::before {
+            width: 100%;
+        }
+
+        #sidebar-wrapper .list-group-item.active {
+            background: var(--active-item-bg);
+            color: white;
+            box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+            transform: translateX(5px);
+        }
+
+        #sidebar-wrapper .list-group-item i {
+            width: 20px;
+            text-align: center;
+            margin-right: 12px;
+            font-size: 1.1rem;
+        }
+
+        .navbar-custom {
+            background: var(--navbar-bg);
+            color: white;
+            padding: 1rem 2rem;
+        }
+
+        #page-content-wrapper {
+             width: 100%;
+        }
+
+        /* Responsive sidebar toggle */
+        @@media (max-width: 768px) {
+            #sidebar-wrapper {
+                position: fixed;
+                left: -280px;
+                height: 100vh;
+                z-index: 1050;
+            }
+            
+            #wrapper.toggled #sidebar-wrapper {
+                left: 0;
+            }
+        }
+    </style>
+    <script>
+        window.apiBaseUrl = '@apiBaseUrl';
+    </script>
+</head>
+<body>
+@if (userId != null)
+{
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <div class="sidebar-heading text-center">
+                <img src="/images/logo.png" alt="Logo" />
+                <span>EG DİJİTAL ÇÖZÜM</span>
+            </div>
+            <div class="list-group list-group-flush">
+                <a asp-controller="Dashboard" asp-action="Index" class="list-group-item list-group-item-action">
+                    <i class="fas fa-home"></i>Ana Sayfa
+                </a>
+                <a asp-controller="User" asp-action="Profile" class="list-group-item list-group-item-action">
+                    <i class="fas fa-user-circle"></i>Hesabım
+                </a>
+                <a asp-controller="Invoice" asp-action="List" class="list-group-item list-group-item-action">
+                    <i class="fas fa-file-invoice"></i>Faturalarım
+                </a>
+                <a asp-controller="Report" asp-action="ExcelReports" class="list-group-item list-group-item-action">
+                    <i class="fas fa-file-excel"></i>Excel Raporlarım
+                </a>
+                <a asp-controller="Dashboard" asp-action="Firmalarim" class="list-group-item list-group-item-action">
+                    <i class="fas fa-building"></i>Firmalarım
+                </a>
+                <a asp-controller="User" asp-action="Users" class="list-group-item list-group-item-action">
+                    <i class="fas fa-users"></i>Kullanıcılarım
+                </a>
+                <a asp-controller="User" asp-action="Logout" class="list-group-item list-group-item-action">
+                    <i class="fas fa-sign-out-alt"></i>Güvenli Çıkış
+                </a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+                <div class="container-fluid">
+                    <button class="btn btn-outline-light d-md-none" id="sidebarToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="action-buttons me-auto">
+                            <!-- Butonlar eski tasarımına geri getirildi, sadece onclick eklendi -->
+                            <a class="btn btn-sm btn-outline-light" onclick="setEklemeTipi('Firma')">
+                                <i class="fas fa-plus"></i> Yeni Firma
+                            </a>
+                            <button type="button" class="btn btn-sm btn-danger" onclick="setEklemeTipi('Fiş')">
+                                <i class="fas fa-receipt"></i> Yeni Fiş
+                            </button>
+                            <button type="button" class="btn btn-sm btn-success" onclick="setEklemeTipi('Fatura')">
+                                <i class="fas fa-file-invoice"></i> Yeni Fatura
+                            </button>
+                        </div>
+                        @{
+                            var userName = HttpContextAccessor.HttpContext.Session.GetString("UserName");
+                            var lastLogin = HttpContextAccessor.HttpContext.Session.GetString("LastLogin");
+                        }
+                        @if (userName != null)
+                        {
+                            <div class="text-white me-2">
+                                Merhaba, @userName (Son Giriş: @lastLogin)
+                            </div>
+                        }
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-fluid mt-4">
+                <main role="main" class="pb-3 flex-grow-1">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+
+    @await Html.PartialAsync("_FirmaSecModal", new List<FisFaturaUI.Models.FirmViewModel>())
+}
+else
+{
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+}
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

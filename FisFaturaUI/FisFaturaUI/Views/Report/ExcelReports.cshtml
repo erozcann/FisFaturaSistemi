@@ -1,0 +1,316 @@
+@{
+    ViewData["Title"] = "Excel Raporları";
+}
+
+<style>
+    .report-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .report-header {
+        text-align: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid #f8f9fa;
+    }
+
+    .report-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #2c3e50;
+    }
+
+    .report-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        padding: 2rem;
+        border: 1px solid #e9ecef;
+    }
+
+    .filter-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #e9ecef;
+    }
+
+    .column-selection, .date-selection {
+        background: #f8f9fa;
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    .filter-title {
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #667eea;
+        display: inline-block;
+    }
+    
+    .column-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 0.75rem;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+    
+    .form-check-label {
+        font-size: 0.9rem;
+    }
+
+    .date-inputs {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .form-control {
+        border-radius: 8px;
+    }
+
+    .report-actions {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .btn-generate {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 0.75rem 2rem;
+        font-weight: 600;
+        border-radius: 8px;
+        border: none;
+    }
+
+    .btn-download {
+        background: linear-gradient(135deg, #28a745, #20c997);
+        color: white;
+        padding: 0.75rem 2rem;
+        font-weight: 600;
+        border-radius: 8px;
+        border: none;
+    }
+    
+    .report-table-container {
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    .report-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+    .report-table thead {
+        background-color: #2c3e50;
+        color: white;
+    }
+
+    .report-table th, .report-table td {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border-bottom: 1px solid #e9ecef;
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 3rem;
+        color: #6c757d;
+    }
+</style>
+
+<div class="report-container">
+    <div class="report-header">
+        <h1 class="report-title">
+            <i class="fas fa-file-excel me-2"></i>Excel Raporları
+        </h1>
+    </div>
+
+    <div class="report-card">
+        <div class="filter-section">
+            <div class="column-selection">
+                <h5 class="filter-title">Rapora Dahil Edilecek Kolonlar</h5>
+                <div class="column-list">
+                    <!-- Checkbox'lar buraya dinamik olarak eklenebilir veya statik olarak yazılabilir -->
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="FaturaNo" id="colFaturaNo" checked><label class="form-check-label" for="colFaturaNo">Fatura No</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="FaturaTarihi" id="colFaturaTarihi" checked><label class="form-check-label" for="colFaturaTarihi">Fatura Tarihi</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="FirmaGonderen" id="colFirmaGonderen" checked><label class="form-check-label" for="colFirmaGonderen">Gönderen Firma</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="FirmaAlici" id="colFirmaAlici" checked><label class="form-check-label" for="colFirmaAlici">Alıcı Firma</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="ToplamTutar" id="colToplamTutar" checked><label class="form-check-label" for="colToplamTutar">Toplam Tutar</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="KdvToplam" id="colKdvToplam" checked><label class="form-check-label" for="colKdvToplam">KDV Toplam</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="MatrahToplam" id="colMatrahToplam"><label class="form-check-label" for="colMatrahToplam">Matrah Toplam</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="GelirGider" id="colGelirGider"><label class="form-check-label" for="colGelirGider">Gelir/Gider</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="FaturaTuru" id="colFaturaTuru"><label class="form-check-label" for="colFaturaTuru">Fatura Türü</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="Durum" id="colDurum"><label class="form-check-label" for="colDurum">Durum</label></div>
+                </div>
+            </div>
+            <div class="date-selection">
+                <h5 class="filter-title">Tarih Aralığı</h5>
+                <div class="date-inputs">
+                    <input type="date" id="startDate" class="form-control">
+                    <input type="date" id="endDate" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="report-actions">
+            <button id="generateReportBtn" class="btn btn-generate me-2">
+                <i class="fas fa-cogs me-2"></i>Raporu Oluştur
+            </button>
+            <button id="downloadExcelBtn" class="btn btn-download" disabled>
+                <i class="fas fa-download me-2"></i>Excel İndir
+            </button>
+        </div>
+
+        <div id="reportResult" class="report-table-container">
+            <div class="empty-state">
+                <i class="fas fa-chart-bar fa-3x mb-3"></i>
+                <p>Rapor oluşturmak için lütfen filtreleri seçip "Raporu Oluştur" butonuna tıklayın.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const generateReportBtn = document.getElementById('generateReportBtn');
+        const downloadExcelBtn = document.getElementById('downloadExcelBtn');
+        const reportResultDiv = document.getElementById('reportResult');
+
+        generateReportBtn.addEventListener('click', function () {
+            const selectedColumns = getSelectedColumns();
+            const startDate = document.getElementById('startDate').value;
+            const endDate = document.getElementById('endDate').value;
+
+            if (selectedColumns.length === 0) {
+                alert('Lütfen en az bir kolon seçin.');
+                return;
+            }
+
+            const requestBody = {
+                startDate: startDate || null,
+                endDate: endDate || null,
+                columns: selectedColumns
+            };
+
+            reportResultDiv.innerHTML = `<div class="text-center"><i class="fas fa-spinner fa-spin fa-3x"></i><p class="mt-2">Rapor oluşturuluyor...</p></div>`;
+
+            fetch(`${window.apiBaseUrl}/api/report/preview`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(requestBody)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                renderTable(data, selectedColumns);
+                downloadExcelBtn.disabled = false;
+            })
+            .catch(error => {
+                console.error('There has been a problem with your fetch operation:', error);
+                reportResultDiv.innerHTML = `<div class="alert alert-danger">Rapor oluşturulurken bir hata oluştu.</div>`;
+                downloadExcelBtn.disabled = true;
+            });
+        });
+
+        downloadExcelBtn.addEventListener('click', function() {
+            const selectedColumns = getSelectedColumns();
+            const startDate = document.getElementById('startDate').value;
+            const endDate = document.getElementById('endDate').value;
+
+            const requestBody = {
+                startDate: startDate || null,
+                endDate: endDate || null,
+                columns: selectedColumns
+            };
+
+            fetch(`${window.apiBaseUrl}/api/report/generate`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(requestBody)
+            })
+            .then(response => response.blob())
+            .then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = 'FaturaRaporu.xlsx';
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+            })
+            .catch(err => {
+                alert('Excel indirilirken bir hata oluştu.');
+                console.error(err);
+            });
+        });
+
+        function getSelectedColumns() {
+            const checkboxes = document.querySelectorAll('.column-list .form-check-input');
+            const selected = [];
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    selected.push(cb.value);
+                }
+            });
+            return selected;
+        }
+
+        function renderTable(data, columns) {
+            if (data.length === 0) {
+                reportResultDiv.innerHTML = `<div class="empty-state">
+                                                <i class="fas fa-box-open fa-3x mb-3"></i>
+                                                <p>Seçilen kriterlere uygun veri bulunamadı.</p>
+                                             </div>`;
+                return;
+            }
+
+            const columnLabels = {
+                "FaturaNo": "Fatura No",
+                "FaturaTarihi": "Fatura Tarihi",
+                "FirmaGonderen": "Gönderen Firma",
+                "FirmaAlici": "Alıcı Firma",
+                "ToplamTutar": "Toplam Tutar",
+                "KdvToplam": "KDV Toplam",
+                "MatrahToplam": "Matrah Toplam",
+                "GelirGider": "Gelir/Gider",
+                "FaturaTuru": "Fatura Türü",
+                "Durum": "Durum"
+            };
+
+            let table = '<table class="report-table"><thead><tr>';
+            columns.forEach(col => {
+                table += `<th>${columnLabels[col] || col}</th>`;
+            });
+            table += '</tr></thead><tbody>';
+
+            data.forEach(row => {
+                table += '<tr>';
+                columns.forEach(col => {
+                    const value = row[col] !== null ? row[col] : '';
+                    table += `<td>${value}</td>`;
+                });
+                table += '</tr>';
+            });
+
+            table += '</tbody></table>';
+            reportResultDiv.innerHTML = table;
+        }
+    });
+</script>
+} 

@@ -1,0 +1,184 @@
+/* Yeni ana sayfa için özel CSS stilleri buraya eklenecek. */
+body.landing-page {
+    font-family: 'Poppins', sans-serif; /* Örnek bir font */
+    color: #333;
+    background-color: #f8f9fa;
+} 
+
+/* Genel Stiller */
+body.landing-page {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Navigasyon Çubuğu */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar-brand strong {
+    color: #0d6efd; /* Bootstrap Primary Rengi */
+}
+
+.nav-item .btn {
+    margin-left: 15px;
+}
+
+
+/* Hero Section */
+.hero-section {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #212529;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+.store-buttons .store-btn {
+    padding: 10px 25px;
+    font-size: 1rem;
+    margin-right: 15px;
+    border-radius: 8px;
+}
+
+.store-buttons .store-btn i {
+    margin-right: 8px;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Features Section */
+.features-section {
+    padding: 80px 0;
+    background-color: #f8f9fa; /* Biraz farklı bir arka plan rengi */
+}
+
+.section-title {
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.feature-card {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: #0d6efd; /* Bootstrap Primary Rengi */
+    margin-bottom: 20px;
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.feature-description {
+    color: #6c757d;
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 80px 0;
+}
+
+.gallery-thumbnail {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 250px; /* Sabit yükseklik */
+    object-fit: cover; /* Resmin orantısını koruyarak kutuya sığdırır */
+}
+
+.gallery-thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+#galleryModal .modal-content {
+    background-color: transparent;
+    border: none;
+}
+
+#galleryModal .modal-body {
+    padding: 0;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.contact-info .info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.contact-info .info-item i {
+    font-size: 1.5rem;
+    color: #0d6efd;
+    margin-right: 20px;
+    width: 30px;
+    text-align: center;
+}
+
+.contact-info .info-item h5 {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.contact-info .info-item p {
+    margin: 0;
+    color: #6c757d;
+}
+
+.contact-form .form-control {
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.contact-form .form-check-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Footer Section */
+.footer-section {
+    padding: 40px 0;
+    background-color: #212529;
+    color: #fff;
+} 

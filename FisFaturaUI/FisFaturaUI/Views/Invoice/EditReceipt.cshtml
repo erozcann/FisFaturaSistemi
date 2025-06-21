@@ -1,0 +1,42 @@
+@model FisFaturaUI.Models.ReceiptListViewModel
+@{
+    ViewData["Title"] = "Fiş Düzenle";
+}
+<h2>Fiş Düzenle</h2>
+<form asp-action="EditReceipt" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="mb-3">
+        <label asp-for="FirmaAdi" class="form-label"></label>
+        <input asp-for="FirmaAdi" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="VergiNo" class="form-label"></label>
+        <input asp-for="VergiNo" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="FisNo" class="form-label"></label>
+        <input asp-for="FisNo" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Tarih" class="form-label"></label>
+        <input asp-for="Tarih" class="form-control" type="date" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="ToplamTutar" class="form-label"></label>
+        <input asp-for="ToplamTutar" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="IcerikTuru" class="form-label"></label>
+        <input asp-for="IcerikTuru" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="OdemeSekli" class="form-label"></label>
+        <input asp-for="OdemeSekli" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="GelirGider" class="form-label"></label>
+        <input asp-for="GelirGider" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+    <a asp-action="ReceiptList" class="btn btn-secondary">İptal</a>
+</form> 

@@ -1,0 +1,95 @@
+@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="text-center py-5">
+                <h1 class="display-4 text-primary mb-4">
+                    <i class="fas fa-file-invoice me-3"></i>
+                    FisFatura Sistemi
+                </h1>
+                <p class="lead text-muted mb-5">
+                    Modern, akıllı ve kullanıcı dostu fatura yönetim platformu
+                </p>
+                
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card shadow-lg border-0">
+                            <div class="card-body p-5">
+                                <h3 class="card-title text-center mb-4">
+                                    <i class="fas fa-rocket text-success me-2"></i>
+                                    Hoş Geldiniz!
+                                </h3>
+                                <p class="card-text text-center mb-4">
+                                    FisFatura sistemi ile fatura ve fiş yönetiminizi kolaylaştırın. 
+                                    OCR teknolojisi ile görüntülerden otomatik veri çıkarma, 
+                                    akıllı sınıflandırma ve detaylı raporlama özelliklerini keşfedin.
+                                </p>
+                                
+                                <div class="row text-center">
+                                    <div class="col-md-4 mb-3">
+                                        <div class="feature-item">
+                                            <i class="fas fa-eye fa-2x text-primary mb-3"></i>
+                                            <h5>OCR Teknolojisi</h5>
+                                            <p class="text-muted">Görüntülerden otomatik veri çıkarma</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="feature-item">
+                                            <i class="fas fa-chart-line fa-2x text-success mb-3"></i>
+                                            <h5>Akıllı Raporlama</h5>
+                                            <p class="text-muted">Detaylı analiz ve Excel export</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="feature-item">
+                                            <i class="fas fa-shield-alt fa-2x text-warning mb-3"></i>
+                                            <h5>Güvenli Sistem</h5>
+                                            <p class="text-muted">Kullanıcı bazlı erişim kontrolü</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-center mt-4">
+                                    <a asp-controller="User" asp-action="Login" class="btn btn-primary btn-lg me-3">
+                                        <i class="fas fa-sign-in-alt me-2"></i>
+                                        Giriş Yap
+                                    </a>
+                                    <a asp-controller="User" asp-action="Register" class="btn btn-outline-primary btn-lg">
+                                        <i class="fas fa-user-plus me-2"></i>
+                                        Kayıt Ol
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .feature-item {
+        padding: 1rem;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+    
+    .feature-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .card {
+        border-radius: 15px;
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    }
+    
+    .btn-lg {
+        padding: 12px 30px;
+        border-radius: 25px;
+        font-weight: 600;
+    }
+</style> 

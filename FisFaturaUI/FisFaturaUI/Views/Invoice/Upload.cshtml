@@ -1,0 +1,24 @@
+﻿@model FisFaturaUI.Models.OcrInvoiceViewModel
+
+@{
+    ViewData["Title"] = "OCR Test Yüklemesi";
+}
+
+<h2>📎 OCR ile Fatura Görseli Yükle</h2>
+
+<form asp-action="Upload" asp-controller="Invoice" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <input type="file" name="File" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Yükle ve OCR Yap</button>
+</form>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger mt-3">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <p>@error.ErrorMessage</p>
+        }
+    </div>
+}

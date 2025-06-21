@@ -1,0 +1,96 @@
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+    <script>
+        function toNumberString(val) {
+            if (!val) return "0.00";
+            return val.replace(/\./g, '').replace(',', '.');
+        }
+
+        $(document).ready(function () {
+            console.log('Form script yüklendi');
+
+            // Form submit olayını yakala
+            $('#invoiceForm').on('submit', function (e) {
+                e.preventDefault();
+                console.log('Form submit eventi yakalandı');
+
+                var formData = new FormData(this);
+                
+                // Zorunlu alanları kontrol et
+                var senaryo = $('#OcrInvoice_Senaryo').val();
+                var odemeTuru = $('#OcrInvoice_OdemeYontemi').val();
+                var faturaTipi = $('#OcrInvoice_FaturaTipi').val();
+                var gelirGider = $('#OcrInvoice_GelirGider').val();
+
+                if (!senaryo || !odemeTuru || !faturaTipi) {
+                    alert('Lütfen tüm zorunlu alanları doldurun (Senaryo, Ödeme Yöntemi ve Fatura Tipi)');
+                    return;
+                }
+
+                // Form verilerini logla
+                console.log('Form verileri:');
+                for (var pair of formData.entries()) {
+                    console.log(pair[0] + ': ' + pair[1]);
+                }
+
+                // Seçili değerleri güncelle
+                formData.set('OcrInvoice.Senaryo', senaryo);
+                formData.set('OcrInvoice.OdemeTuru', odemeTuru);
+                formData.set('OcrInvoice.IcerikTuru', 'Standart');
+                formData.set('OcrInvoice.FaturaTipi', faturaTipi);
+                formData.set('OcrInvoice.GelirGider', gelirGider);
+
+                // Firma ve kullanıcı ID'lerini set et
+                var firmaAliciId = $('#OcrInvoice_FirmaAliciId').val() || 0;
+                var firmaGonderenId = $('#OcrInvoice_FirmaGonderenId').val() || 0;
+                var kaydedenKullaniciId = $('#OcrInvoice_KaydedenKullaniciId').val() || 1;
+
+                formData.set('OcrInvoice.FirmaAliciId', firmaAliciId);
+                formData.set('OcrInvoice.FirmaGonderenId', firmaGonderenId);
+                formData.set('OcrInvoice.KaydedenKullaniciId', kaydedenKullaniciId);
+
+                $.ajax({
+                    url: '/Invoice/Save',
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function (response) {
+                        console.log('Kayıt yanıtı:', response);
+                        if (response.success) {
+                            alert('Fatura başarıyla kaydedildi.');
+                            window.location.href = '/Invoice/Index';
+                        } else {
+                            alert('Kayıt sırasında bir hata oluştu: ' + response.message);
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Kayıt hatası:', error);
+                        console.error('Status:', status);
+                        console.error('Response:', xhr.responseText);
+                        
+                        try {
+                            var errorResponse = JSON.parse(xhr.responseText);
+                            var errorMessage = 'Hata oluştu:\n';
+                            if (errorResponse.errors) {
+                                Object.keys(errorResponse.errors).forEach(function(key) {
+                                    errorMessage += '- ' + errorResponse.errors[key].join('\n') + '\n';
+                                });
+                            } else {
+                                errorMessage += errorResponse.message || 'Bilinmeyen bir hata oluştu';
+                            }
+                            alert(errorMessage);
+                        } catch (e) {
+                            alert('Kayıt sırasında bir hata oluştu.');
+                        }
+                    }
+                });
+            });
+
+            $('#invoiceFile').change(function () {
+                // ... existing code ...
+            });
+        });
+    </script>
+} 

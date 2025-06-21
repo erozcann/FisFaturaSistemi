@@ -1,0 +1,175 @@
+﻿@model List<FisFaturaUI.Models.InvoiceListViewModel>
+
+@{
+    ViewData["Title"] = "Faturalarım";
+}
+
+<style>
+    .invoices-container {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .invoices-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .invoices-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #2c3e50;
+    }
+    
+    .invoices-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        padding: 2rem;
+        border: 1px solid #e9ecef;
+    }
+    
+    .actions-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        border-radius: 8px;
+    }
+
+    .search-box input {
+        border-radius: 8px;
+        border: 2px solid #e9ecef;
+        padding: 0.5rem 1rem;
+        min-width: 300px;
+    }
+    
+    .invoice-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+    
+    .invoice-table thead {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+    }
+    
+    .invoice-table th, .invoice-table td {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid #e9ecef;
+        vertical-align: middle;
+    }
+
+    .invoice-table tbody tr:hover {
+        background-color: #f8f9fa;
+    }
+
+    .status-badge {
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: white;
+    }
+    .status-gelir { background: linear-gradient(135deg, #28a745, #20c997); }
+    .status-gider { background: linear-gradient(135deg, #dc3545, #c82333); }
+
+</style>
+
+<div class="invoices-container">
+    <div class="invoices-header">
+        <h1 class="invoices-title"><i class="fas fa-file-invoice-dollar me-2"></i>Faturalarım</h1>
+    </div>
+
+    <div class="invoices-card">
+        <div class="actions-bar">
+            <div class="search-box">
+                <input type="text" id="searchInput" class="form-control" placeholder="Fatura no veya firma adı ile ara...">
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="invoice-table">
+                <thead>
+                    <tr>
+                        <th>Gönderen Firma</th>
+                        <th>Alıcı Firma</th>
+                        <th>Fatura No</th>
+                        <th>Fatura Tarihi</th>
+                        <th>Tutar</th>
+                        <th>Ödeme Türü</th>
+                        <th>Gelir/Gider</th>
+                        <th>Kayıt Tarihi</th>
+                        <th class="text-center">İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody id="invoiceTableBody">
+                    @if (Model != null && Model.Any())
+                    {
+                        @foreach (var item in Model)
+                        {
+                            <tr data-searchable-text="@(item.FirmaGonderenAdi?.ToLower()) @(item.FirmaAliciAdi?.ToLower()) @(item.FaturaNo?.ToLower())">
+                                <td>@item.FirmaGonderenAdi</td>
+                                <td>@item.FirmaAliciAdi</td>
+                                <td>@item.FaturaNo</td>
+                                <td>@item.FaturaTarihi?.ToString("dd.MM.yyyy")</td>
+                                <td>@item.ToplamTutar?.ToString("C")</td>
+                                <td>@item.OdemeTuru</td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(item.GelirGider))
+                                    {
+                                        <span class="status-badge @(item.GelirGider.ToLower() == "gelir" ? "status-gelir" : "status-gider")">
+                                            @item.GelirGider
+                                        </span>
+                                    }
+                                </td>
+                                <td>@item.KayitTarihi?.ToString("dd.MM.yyyy HH:mm")</td>
+                                <td class="text-center">
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></a>
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger" onclick="return confirm('Bu faturayı silmek istediğinizden emin misiniz?');"><i class="fas fa-trash"></i></a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="9" class="text-center">Kayıtlı fatura bulunamadı.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('searchInput');
+        const tableBody = document.getElementById('invoiceTableBody');
+        const rows = tableBody.getElementsByTagName('tr');
+
+        searchInput.addEventListener('keyup', function() {
+            const searchTerm = searchInput.value.toLowerCase();
+
+            for (let i = 0; i < rows.length; i++) {
+                const searchableText = rows[i].getAttribute('data-searchable-text');
+                if (searchableText) {
+                    if (searchableText.includes(searchTerm)) {
+                        rows[i].style.display = "";
+                    } else {
+                        rows[i].style.display = "none";
+                    }
+                }
+            }
+        });
+    });
+</script>
+}

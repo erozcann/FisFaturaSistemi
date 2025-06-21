@@ -1,0 +1,291 @@
+﻿@model FisFaturaUI.Models.CreateInvoicePageViewModel
+@{
+    ViewData["Title"] = "Yeni Fatura Ekle";
+    var firmalar = ViewBag.Firmalar as List<FisFaturaUI.Models.FirmViewModel> ?? new List<FisFaturaUI.Models.FirmViewModel>();
+}
+
+<style>
+    .form-container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .form-header { text-align: center; margin-bottom: 2rem; }
+    .form-title { font-size: 2rem; font-weight: 700; color: #2c3e50; }
+    .form-card { background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); padding: 2rem; border: 1px solid #e9ecef; }
+    .section-card { margin-bottom: 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .section-header { background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 0.75rem 1.25rem; font-weight: 600; color: #2c3e50; border-bottom: 1px solid #dee2e6; }
+    .kdv-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 1rem; align-items: center; }
+    .kdv-header { font-weight: bold; text-align: center; font-size: 0.9rem; }
+    .form-actions { display: flex; justify-content: flex-end; gap: 1rem; margin-top: 2rem; }
+    .preview-area { background-color: #f8f9fa; border-radius: 8px; padding: 2rem; text-align: center; color: #6c757d; }
+</style>
+
+<div class="form-container">
+    <div class="form-header">
+        <h1 class="form-title"><i class="fas fa-file-plus me-2"></i>Yeni Fatura Ekle</h1>
+    </div>
+
+    <form id="invoiceForm" asp-action="Save" method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="form-card">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                    <!-- Fatura Yükleme -->
+                    <div class="section-card">
+                        <div class="section-header"><i class="fas fa-upload me-2"></i>Fatura Dosyası</div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label class="control-label mb-2">Fatura dosyasını seçin (.pdf, .jpg, .png)</label>
+                                <input type="file" id="invoiceFile" name="faturaDosyasi" class="form-control" accept=".pdf,.jpg,.jpeg,.png" required />
+                            </div>
+                            <div id="loadingSpinner" class="text-center mt-3" style="display: none;">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p class="mt-2">Faturanız işleniyor, lütfen bekleyin...</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Fatura Bilgileri -->
+                    <div class="section-card">
+                        <div class="section-header"><i class="fas fa-file-invoice me-2"></i>Fatura Detayları</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label asp-for="OcrInvoice.FaturaNo" class="form-label"></label>
+                                    <input asp-for="OcrInvoice.FaturaNo" class="form-control" />
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label asp-for="OcrInvoice.FaturaTarihi" class="form-label"></label>
+                                    <input asp-for="OcrInvoice.FaturaTarihi" class="form-control" type="date" />
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label asp-for="OcrInvoice.ToplamTutar" class="form-label"></label>
+                                    <input asp-for="OcrInvoice.ToplamTutar" class="form-control" type="number" step="0.01" />
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label asp-for="OcrInvoice.KdvToplamTutar" class="form-label"></label>
+                                    <input asp-for="OcrInvoice.KdvToplamTutar" class="form-control" type="number" step="0.01" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Taraflar -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="section-card">
+                                <div class="section-header"><i class="fas fa-paper-plane me-2"></i>Fatura Gönderen</div>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <label asp-for="OcrInvoice.FirmaGonderenAdi" class="form-label"></label>
+                                        <input asp-for="OcrInvoice.FirmaGonderenAdi" class="form-control" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label asp-for="OcrInvoice.FirmaGonderenVergiNo" class="form-label"></label>
+                                        <input asp-for="OcrInvoice.FirmaGonderenVergiNo" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                             <div class="section-card">
+                                <div class="section-header"><i class="fas fa-inbox me-2"></i>Fatura Alan</div>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <label asp-for="OcrInvoice.FirmaAliciAdi" class="form-label"></label>
+                                        <input asp-for="OcrInvoice.FirmaAliciAdi" class="form-control" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label asp-for="OcrInvoice.FirmaAliciVergiNo" class="form-label"></label>
+                                        <input asp-for="OcrInvoice.FirmaAliciVergiNo" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sınıflandırma -->
+                    <div class="section-card">
+                        <div class="section-header"><i class="fas fa-tags me-2"></i>Sınıflandırma</div>
+                        <div class="card-body">
+                             <div class="row">
+                                <div class="col-md-6 mb-3"><label asp-for="OcrInvoice.Senaryo"></label><select asp-for="OcrInvoice.Senaryo" class="form-select" asp-items="new SelectList(Model.Senaryolar)"><option value="">Seçiniz</option></select></div>
+                                <div class="col-md-6 mb-3"><label asp-for="OcrInvoice.OdemeYontemi"></label><select asp-for="OcrInvoice.OdemeYontemi" class="form-select" asp-items="new SelectList(Model.OdemeYontemleri)"><option value="">Seçiniz</option></select></div>
+                                <div class="col-md-6 mb-3"><label asp-for="OcrInvoice.GelirGider"></label><select asp-for="OcrInvoice.GelirGider" class="form-select" asp-items="new SelectList(Model.GelirGiderSecenekleri)"><option value="">Seçiniz</option></select></div>
+                                <div class="col-md-6 mb-3"><label asp-for="OcrInvoice.FaturaTipi"></label><select asp-for="OcrInvoice.FaturaTipi" class="form-select" asp-items="new SelectList(Model.FaturaTurleri)"><option value="">Seçiniz</option></select></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- KDV & Matrah -->
+                    <div class="section-card">
+                        <div class="section-header"><i class="fas fa-percentage me-2"></i>KDV ve Matrah Detayları</div>
+                        <div class="card-body">
+                            <div class="kdv-grid mb-2">
+                                <div></div>
+                                <div class="kdv-header">%0</div> <div class="kdv-header">%1</div> <div class="kdv-header">%8</div>
+                                <div class="kdv-header">%10</div> <div class="kdv-header">%18</div> <div class="kdv-header">%20</div>
+                            </div>
+                            <div class="kdv-grid mb-3">
+                                <div class="fw-bold">KDV</div>
+                                <div><input asp-for="OcrInvoice.Kdv0" class="form-control" type="number" step="0.01" /></div>
+                                <div><input asp-for="OcrInvoice.Kdv1" class="form-control" type="number" step="0.01" /></div>
+                                <div><input asp-for="OcrInvoice.Kdv8" class="form-control" type="number" step="0.01" /></div>
+                                <div><input asp-for="OcrInvoice.Kdv10" class="form-control" type="number" step="0.01" /></div>
+                                <div><input asp-for="OcrInvoice.Kdv18" class="form-control" type="number" step="0.01" /></div>
+                                <div><input asp-for="OcrInvoice.Kdv20" class="form-control" type="number" step="0.01" /></div>
+                            </div>
+                             <div class="kdv-grid">
+                                <div class="fw-bold">Matrah</div>
+                                <div><input asp-for="OcrInvoice.Matrah0" class="form-control" type="number" step="0.01" /></div>
+                                <div><input asp-for="OcrInvoice.Matrah1" class="form-control" type="number" step="0.01" /></div>
+                                <div><input asp-for="OcrInvoice.Matrah8" class="form-control" type="number" step="0.01" /></div>
+                                <div><input asp-for="OcrInvoice.Matrah10" class="form-control" type="number" step="0.01" /></div>
+                                <div><input asp-for="OcrInvoice.Matrah18" class="form-control" type="number" step="0.01" /></div>
+                                <div><input asp-for="OcrInvoice.Matrah20" class="form-control" type="number" step="0.01" /></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <a asp-action="List" class="btn btn-secondary"><i class="fas fa-arrow-left me-2"></i>Geri Dön</a>
+                        <button id="submitInvoice" type="submit" class="btn btn-primary"><i class="fas fa-save me-2"></i>Kaydet</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                 <div class="preview-area">
+                    <i class="fas fa-image fa-3x mb-3"></i>
+                    <h5>Fatura Önizlemesi</h5>
+                    <p>Lütfen fatura dosyasını seçin. Seçtiğiniz resim burada görünecektir.</p>
+                    <img id="invoicePreview" src="#" alt="Fatura Önizleme" class="img-fluid rounded" style="display: none; margin-top: 15px;" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        function toNumberString(val) {
+            if (!val) return "0.00";
+            // Gelen değerde hem nokta hem virgül olabileceği için önce noktaları (binlik ayıracı) sil, sonra virgülü noktaya çevir.
+            return val.replace(/\./g, '').replace(',', '.');
+        }
+
+        $(document).ready(function () {
+            // Formu AJAX ile gönder. Bu, hem Save hem de Edit için çalışır.
+            $('#invoiceForm').on('submit', function (e) {
+                e.preventDefault(); // Sayfanın yeniden yüklenmesini engelle
+
+                $('#loadingSpinner').show(); // Kaydetme sırasında da spinner göster
+
+                var formData = new FormData(this);
+
+                // 'this.action' formun 'action' özniteliğinden URL'i alır
+                // Bu sayede hem /Invoice/Save hem de /Invoice/Edit/{id} için çalışır.
+                $.ajax({
+                    url: this.action,
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function (response) {
+                        $('#loadingSpinner').hide();
+                        if (response.success) {
+                            // Başarı mesajını TempData'ya benzer bir şekilde göstermek için
+                            // bir sonraki sayfaya bir query string parametresi ekleyebiliriz
+                            // veya basit bir alert gösterebiliriz.
+                            alert(response.message || 'İşlem başarıyla tamamlandı.');
+                            window.location.href = '/Invoice/List'; // Listeleme sayfasına yönlendir
+                        } else {
+                            alert('Hata: ' + response.message);
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        $('#loadingSpinner').hide();
+                        alert('Bir hata oluştu: ' + error);
+                    }
+                });
+            });
+
+            $('#invoiceFile').change(function () {
+                console.log('File input change event triggered.');
+                var file = this.files[0];
+                if (file) {
+                    console.log('File selected:', file.name, '(', file.size, 'bytes)');
+                    // Fatura Önizlemesi
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#invoicePreview').attr('src', e.target.result).show();
+                    };
+                    reader.readAsDataURL(file);
+
+                    // Yükleme animasyonunu göster
+                    $('#loadingSpinner').show();
+
+                    // OCR İşlemi için doğru URL'e istek at
+                    var formData = new FormData();
+                    formData.append('file', file);
+
+                    $.ajax({
+                        url: '/Invoice/ProcessOcr', // <-- BURAYI DÜZELTTİM
+                        type: 'POST',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function (response) {
+                            // Yükleme animasyonunu gizle
+                            $('#loadingSpinner').hide();
+                            
+                            console.log('OCR Response:', response);
+                            if (response.success && response.data) {
+                                var data = response.data;
+                                // OCR'dan gelen verileri form alanlarına doldur
+                                $('input[name="OcrInvoice.FaturaNo"]').val(data.FaturaNo);
+                                var faturaTarihi = data.FaturaTarihi;
+                                if (faturaTarihi) {
+                                     // Gelen tarih formatı (örn: 24.06.2024) HTML5 date input formatına (yyyy-MM-dd) çevriliyor.
+                                    var parts = faturaTarihi.split(/[.\/-]/);
+                                    if (parts.length === 3) {
+                                        var formattedDate = parts[2] + '-' + parts[1] + '-' + parts[0];
+                                        $('input[name="OcrInvoice.FaturaTarihi"]').val(formattedDate);
+                                    } else {
+                                        $('input[name="OcrInvoice.FaturaTarihi"]').val(faturaTarihi); // Beklenmedik format
+                                    }
+                                }
+                                $('input[name="OcrInvoice.ToplamTutar"]').val(toNumberString(data.ToplamTutar));
+                                $('input[name="OcrInvoice.KdvToplamTutar"]').val(toNumberString(data.KdvToplamTutar));
+                                $('input[name="OcrInvoice.FirmaAliciAdi"]').val(data.FirmaAliciAdi);
+                                $('input[name="OcrInvoice.FirmaAliciVergiNo"]').val(data.FirmaAliciVergiNo);
+                                $('input[name="OcrInvoice.FirmaGonderenAdi"]').val(data.FirmaGonderenAdi || '');
+                                $('input[name="OcrInvoice.FirmaGonderenVergiNo"]').val(data.FirmaGonderenVergiNo || '');
+                                
+                                // KDV ve Matrah Detayları
+                                $('input[name="OcrInvoice.Kdv0"]').val(toNumberString(data.Kdv0));
+                                $('input[name="OcrInvoice.Matrah0"]').val(toNumberString(data.Matrah0));
+                                $('input[name="OcrInvoice.Kdv1"]').val(toNumberString(data.Kdv1));
+                                $('input[name="OcrInvoice.Matrah1"]').val(toNumberString(data.Matrah1));
+                                $('input[name="OcrInvoice.Kdv8"]').val(toNumberString(data.Kdv8));
+                                $('input[name="OcrInvoice.Matrah8"]').val(toNumberString(data.Matrah8));
+                                $('input[name="OcrInvoice.Kdv10"]').val(toNumberString(data.Kdv10));
+                                $('input[name="OcrInvoice.Matrah10"]').val(toNumberString(data.Matrah10));
+                                $('input[name="OcrInvoice.Kdv18"]').val(toNumberString(data.Kdv18));
+                                $('input[name="OcrInvoice.Matrah18"]').val(toNumberString(data.Matrah18));
+                                $('input[name="OcrInvoice.Kdv20"]').val(toNumberString(data.Kdv20));
+                                $('input[name="OcrInvoice.Matrah20"]').val(toNumberString(data.Matrah20));
+
+                            } else {
+                                alert('OCR işlemi başarısız: ' + (response.message || 'Sunucudan detay alınamadı.'));
+                            }
+                        },
+                        error: function (xhr) {
+                            // Yükleme animasyonunu gizle
+                            $('#loadingSpinner').hide();
+                            alert('OCR işlemi sırasında bir sunucu hatası oluştu: ' + xhr.statusText);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+}
